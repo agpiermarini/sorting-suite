@@ -4,9 +4,9 @@ pry = require('pryjs')
 const chai = require('chai');
 const assert = chai.assert;
 const expect = chai.expect;
-var compareNumbers = require('../lib/quickSort.js').compareNumbers;
-var quickSort = require('../lib/quickSort.js').quickSort;
-var swapElements = require('../lib/quickSort.js').swapElements;
+const compareNumbers = require('../lib/quickSort.js').compareNumbers;
+const quickSort = require('../lib/quickSort.js').quickSort;
+const swapElements = require('../lib/quickSort.js').swapElements;
 
 describe('compareNumbers', function() {
   it('returns whether first number less than second', function() {
@@ -30,6 +30,7 @@ describe('sort functionality', function() {
       assert.deepEqual(quickSort([ 4, 1, 2 ]), [ 1, 2, 4 ])
       assert.deepEqual(quickSort([ 4, 3, 1, 2 ]), [ 1, 2, 3, 4 ])
       assert.deepEqual(quickSort([ 4, 3, 1, 2, 7, 10, 5 ]), [ 1, 2, 3, 4, 5, 7, 10 ])
+      assert.deepEqual(quickSort([ 4, 3, 1, 1, 2, 7, 10, 5 ]), [ 1, 1, 2, 3, 4, 5, 7, 10 ])
     });
   });
 });
